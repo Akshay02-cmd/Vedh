@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vedh — Register</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="stylesheet" href="./css/Register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="register-wrapper">
+      <!-- Left hero / brand panel -->
+      <aside class="register-hero" aria-hidden="false">
+        <div class="brand">
+          <div class="logo">
+            <img
+              src="./assets/VedhLogo16.9.png"
+              alt="Vedh"
+              class="logo-image"
+            />
+          </div>
+          <div>
+            <div class="brand-name">Vedh</div>
+            <div class="brand-tagline">Deep focus tools for teams</div>
+          </div>
+        </div>
+
+        <h2>Join Vedh today</h2>
+        <p>
+          Create your account to start collaborating with your team, manage
+          projects efficiently and unlock powerful productivity tools.
+        </p>
+      </aside>
+
+      <!-- Right: form card -->
+      <section class="register-card" aria-labelledby="registerTitle">
+        <h3 id="registerTitle" class="title">Create your account</h3>
+        <p class="subtitle">Fill in your details to get started with Vedh.</p>
+
+        <form class="register-form" action="/register" method="POST" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="fullname">Full Name</label>
+            <div class="input-group">
+              <span class="input-icon">👤</span>
+              <input
+                class="input with-icon"
+                id="fullname"
+                name="fullname"
+                type="text"
+                required
+                placeholder="John Doe"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <div class="input-group">
+              <span class="input-icon">📧</span>
+              <input
+                class="input with-icon"
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="username">Username</label>
+            <div class="input-group">
+              <span class="input-icon">@</span>
+              <input
+                class="input with-icon"
+                id="username"
+                name="username"
+                type="text"
+                required
+                placeholder="your.username"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="input-group">
+              <span class="input-icon">🔒</span>
+              <input
+                class="input with-icon"
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="••••••••"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword"
+              >Confirm Password</label
+            >
+            <div class="input-group">
+              <span class="input-icon">🔒</span>
+              <input
+                class="input with-icon"
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                required
+                placeholder="••••••••"
+              />
+            </div>
+          </div>
+
+          <div class="actions">
+            <div class="terms-row">
+              <label class="terms-label">
+                <span class="checkbox" aria-hidden="true"></span>
+                <input
+                  type="checkbox"
+                  name="terms"
+                  class="hidden-checkbox"
+                  required
+                />
+                <span class="muted"
+                  >I agree to the
+                  <a href="/terms" class="link">Terms & Conditions</a></span
+                >
+              </label>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="btn btn-primary">
+                Create Account
+              </button>
+              <a href="./login.html" class="btn btn-ghost btn-link">Sign In</a>
+            </div>
+          </div>
+
+          <div class="divider-container">
+            <div class="divider-line"></div>
+            <div class="divider-text">or sign up with</div>
+            <div class="divider-line"></div>
+          </div>
+
+          <div class="socials" aria-hidden="false">
+            <button type="button" class="social" title="Sign up with Google">
+              <i class="fab fa-google"></i>
+            </button>
+            <button type="button" class="social" title="Sign up with GitHub">
+              <i class="fab fa-github"></i>
+            </button>
+            <button type="button" class="social" title="Sign up with Microsoft">
+              <i class="fab fa-microsoft"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="./scripts/Register.js"></script>
+  </body>
+</html>

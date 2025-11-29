@@ -39,7 +39,7 @@ This project is being built in **public**, documenting the full journey (Day 0 �
 
 ## 🛠️ Tech Stack
 
-### **Frontend**
+### **Frontend** (in future scope 😅)
 - React.js  
 - TailwindCSS  
 - Zustand / Redux (state management)  

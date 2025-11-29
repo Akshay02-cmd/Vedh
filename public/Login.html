@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vedh — Login</title>
+        <link rel="icon" type="image/png" href="./assets/logo.png" />
+        <link rel="stylesheet" href="./css/Login.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="login-wrapper">
+            <!-- Left hero / brand panel -->
+            <aside class="login-hero" aria-hidden="false">
+                <div class="brand">
+                    <div class="logo">
+                        <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="logo-image" />
+                    </div>
+                    <div>
+                        <div class="brand-name">Vedh</div>
+                        <div class="brand-tagline">Deep focus tools for teams</div>
+                    </div>
+                </div>
+
+                <h2>Welcome back</h2>
+                <p>
+                    Sign in to continue to Vedh. Access your projects, collaborate with your
+                    team and pick up where you left off.
+                </p>
+            </aside>
+
+            <!-- Right: form card -->
+            <section class="login-card" aria-labelledby="loginTitle">
+                <h3 id="loginTitle" class="title">Sign in to your account</h3>
+                <p class="subtitle">Enter your credentials to access the dashboard.</p>
+
+                <form class="login-form" action="/login" method="POST" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="username">Username</label>
+                        <div class="input-group">
+                            <span class="input-icon">👤</span>
+                            <input class="input with-icon" id="username" name="username" type="text" required placeholder="your.username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                        <div class="input-group">
+                            <span class="input-icon">🔒</span>
+                            <input class="input with-icon" id="password" name="password" type="password" required placeholder="••••••••" />
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <div class="remember-rows">
+                            <label class="remember-label">
+                                <span class="checkbox" aria-hidden="true"></span>
+                                <input type="checkbox" name="remember" class="hidden-checkbox" />
+                                <span class="muted">Remember me</span>
+                            </label>
+                            <a class="link" href="/forgot">Forgot?</a>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <a href="./Register.html" class="btn btn-ghost btn-link">Register</a>
+                        </div>
+                    </div>
+                    <div class="divider-container">
+                        <div class="divider-line"></div>
+                        <div class="divider-text">or continue with</div>
+                        <div class="divider-line"></div>
+                    </div>
+
+                    <div class="socials" aria-hidden="false">
+                        <button type="button" class="social" title="Sign in with Google"><i class="fab fa-google"></i></button>
+                        <button type="button" class="social" title="Sign in with GitHub"><i class="fab fa-github"></i></button>
+                        <button type="button" class="social" title="Sign in with Microsoft"><i class="fab fa-microsoft"></i></button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <script src="./scripts/Login.js"></script>
+    </body>
+</html>
