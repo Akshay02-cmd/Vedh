@@ -25,7 +25,8 @@ const setControlsDisabled = (disabled) => {
     if (loginButton) loginButton.disabled = disabled;
 }
 
-const performLogin = async () => {
+loginForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
     const username = usernameInput?.value?.trim() || '';
     const password = passwordInput?.value || '';
 
@@ -51,30 +52,4 @@ const performLogin = async () => {
         showMessage(String(serverMessage), true);
         setControlsDisabled(false);
     }
-}
-
-// Attach to form submit if available
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        performLogin();
-    });
-}
-
-// Attach to login button if available
-if (loginButton) {
-    loginButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        performLogin();
-    });
-}
-
-// Allow Enter key on password to submit
-if (passwordInput) {
-    passwordInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            performLogin();
-        }
-    });
-}
+});

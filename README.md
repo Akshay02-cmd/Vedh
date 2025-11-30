@@ -18,6 +18,21 @@ It includes daily goals, topic tracking, notes, roadmap planning, progress chart
 This project is being built in **public**, documenting the full journey (Day 0 → Launch).
 
 ---
+## to run project
+
+```
+npm i
+npm start
+
+```
+create .env file in project folder
+```
+PORT=5000
+MONGO_URI=mongodb://localhost:27017
+JWT_SECRET=your_jwt_secret_key
+JWT_LIFETIME=1d
+```
+paste this in your .env file
 
 ## 📌 Features (MVP)
 
