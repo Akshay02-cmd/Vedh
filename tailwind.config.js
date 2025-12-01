@@ -11,10 +11,10 @@ export default {
         primary: {
           DEFAULT: '#4F46E5',
           hover: '#4338CA',
-          light: '#6366F1',
+          light: '#EEF2FF',
         },
         vedh: {
-          slate: '#1E293B',
+          slate: '#64748B',
           mist: '#F8FAFC',
           midnight: '#0F172A',
         },
