@@ -21,15 +21,15 @@ import authRouter from './routes/auth.routes.js';
 import commonRouter from './routes/Files.routes.js';
 
 // extra security packages
-app.set("trust proxy", 1);
-app.use(
-  rateLimiter({
-    windowMs: 15 * 60 * 1000, //15 minutes
-    max: 100, //limit each IP to 100 requests per windowMs
-    standardHeaders: true,
-    legacyHeaders: false,
-  })
-);
+// app.set("trust proxy", 1);
+// app.use(
+//   rateLimiter({
+//     windowMs: 15 * 60 * 1000, //15 minutes
+//     max: 100, //limit each IP to 100 requests per windowMs
+//     standardHeaders: true,
+//     legacyHeaders: false,
+//   })
+// );
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
@@ -37,8 +37,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.use('/auth/', authRouter);
 app.use('/', commonRouter);
+app.use('/api/v1/auth', authRouter);
 
 app.use(notFoundMiddelware);
 app.use(ErrorhandlerMiddelware);

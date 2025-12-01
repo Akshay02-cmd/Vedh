@@ -37,10 +37,10 @@ registerForm?.addEventListener("submit", async (e) => {
 
   const fullname = fullnameInput?.value?.trim() || "";
   const email = emailInput?.value?.trim() || "";
-  const username = usernameInput?.value?.trim() || "";
+  const name = usernameInput?.value?.trim() || "";
   const password = passwordInput?.value || "";
   const confirmPassword = confirmPasswordInput?.value || "";
-  if (!fullname || !email || !username || !password || !confirmPassword) {
+  if (!fullname || !email || !name || !password || !confirmPassword) {
     showMessage("Please fill in all fields.", true);
     return;
   }
@@ -55,7 +55,7 @@ registerForm?.addEventListener("submit", async (e) => {
     const response = await axios.post("/register", {
       fullname,
       email,
-      username,
+      name,
       password,
     });
     const redirectTo = response.data?.redirect || "/";

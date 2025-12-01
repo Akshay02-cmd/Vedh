@@ -1,21 +1,27 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";  
+import authmiddeleware from '../middelwares/auth.middelware.js';
+import FetchFile from "../utils/FetchFile.js";
+
 
 const router = express.Router();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
 
 router.route('/').get((req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/index.html'));
+    res.sendFile(FetchFile('index.html'));
 });
 
 router.route('/login').get((req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/login.html'));
+    res.sendFile(FetchFile('login.html'));
 });
 
 router.route('/register').get((req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/Register.html'));
+    res.sendFile(FetchFile('register.html'));
 });
+
+router.route('/dashboard').get(authmiddeleware, (req, res) => {
+    res.sendFile(FetchFile('dashboard.html'));
+});
+
+
 
 export default router;

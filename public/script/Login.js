@@ -27,11 +27,11 @@ const setControlsDisabled = (disabled) => {
 
 loginForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const username = usernameInput?.value?.trim() || '';
+    const name = usernameInput?.value?.trim() || '';
     const password = passwordInput?.value || '';
 
-    if (!username || !password) {
-        showMessage('Please enter both username and password.', true);
+    if (!name || !password) {
+        showMessage('Please enter both name and password.', true);
         return;
     }
 
@@ -39,7 +39,7 @@ loginForm?.addEventListener('submit', async (e) => {
     showMessage('Signing in...');
 
     try {
-        const response = await axios.post('/api/v1/login', { username, password });
+        const response = await axios.post('/api/v1/auth/login', { name, password });
         // success: redirect if server provided location, otherwise reload
         const redirectTo = response.data?.redirect || '/';
         window.location.href = redirectTo;

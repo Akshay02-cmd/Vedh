@@ -9,7 +9,7 @@
 ```
 └─ public/                 # Public static files and front-end build output
    ├─ assets/
-   ├─ caa  
+   ├─ css 
    ├─ dashboard/
    ├─ scripts/
    ├─ index.html
