@@ -1,4 +1,4 @@
-# Folder structure
+<h1 align = "center">Vedh</h1>
 <!-- Logo and project name -->
 <p align="center">
     <img src="./assets/logo.png" alt="Vedh — Logo" width="160" />
