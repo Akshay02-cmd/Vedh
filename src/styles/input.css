@@ -1,3 +1,129 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply antialiased font-sans text-vedh-midnight;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm cursor-pointer transition-all duration-200 border-0;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-b from-primary to-primary-hover text-white shadow-[0_8px_28px_rgba(79,70,229,0.16)] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(79,70,229,0.24)];
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-primary border border-primary/20 hover:bg-primary/5;
+  }
+  
+  .btn-small {
+    @apply px-4 py-2 text-xs;
+  }
+  
+  .btn-large {
+    @apply px-7 py-3.5 text-base;
+  }
+
+  /* Input Components */
+  .input {
+    @apply h-11 px-3 rounded-lg border border-slate-200/50 bg-transparent text-vedh-midnight outline-none transition-all duration-200 text-sm;
+    @apply focus:border-primary/20 focus:shadow-[0_6px_18px_rgba(79,70,229,0.08)] focus:-translate-y-px;
+  }
+  
+  .input::placeholder {
+    @apply text-slate-500/60;
+  }
+  
+  .input-icon {
+    @apply absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-base pointer-events-none;
+  }
+  
+  .input-with-icon {
+    @apply pl-9;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-xl p-5 shadow-lifted border border-slate-200/50 transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Hero Panel */
+  .hero-panel {
+    @apply rounded-lg bg-gradient-to-br from-primary/95 to-primary-hover/95 text-white p-12 shadow-lifted flex flex-col justify-center min-h-[360px] overflow-hidden relative;
+  }
+
+  /* Feature Icon */
+  .feature-icon {
+    @apply w-14 h-14 bg-slate-50 rounded-xl grid place-items-center text-3xl mb-6;
+  }
+
+  /* Social Button */
+  .social-btn {
+    @apply grid place-items-center w-11 h-11 rounded-lg bg-slate-50 text-vedh-midnight border border-slate-100 cursor-pointer transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  /* Checkbox Custom */
+  .checkbox-custom {
+    @apply w-[18px] h-[18px] rounded-md border border-slate-200 inline-grid place-items-center bg-white flex-shrink-0;
+  }
+
+  /* Animations */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-1 {
+    animation: float1 6s ease-in-out infinite;
+  }
+  
+  .animate-float-2 {
+    animation: float2 6s ease-in-out infinite 1s;
+  }
+  
+  .animate-float-3 {
+    animation: float3 6s ease-in-out infinite 2s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes float2 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-25px); }
+  }
+  
+  .progress-animation {
+    animation: progress 3s ease-in-out infinite;
+  }
+  
+  @keyframes progress {
+    0%, 100% { width: 70%; }
+    50% { width: 85%; }
+  }
+}

@@ -5,76 +5,76 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vedh — Login</title>
         <link rel="icon" type="image/png" href="./assets/logo.png" />
-        <link rel="stylesheet" href="./css/Login.css" />
+        <link rel="stylesheet" href="./css/output.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
-    <body>
-        <div class="login-wrapper">
+    <body class="bg-gradient-to-b from-vedh-mist to-slate-100 min-h-screen flex items-center justify-center p-8">
+        <div class="w-full max-w-5xl grid lg:grid-cols-[1fr_420px] gap-8 items-center">
             <!-- Left hero / brand panel -->
-            <aside class="login-hero" aria-hidden="false">
-                <div class="brand">
-                    <div class="logo">
-                        <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="logo-image" />
+            <aside class="hero-panel" aria-hidden="false">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl grid place-items-center shadow-inner">
+                        <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="w-7 h-7 object-contain" />
                     </div>
                     <div>
-                        <div class="brand-name">Vedh</div>
-                        <div class="brand-tagline">Deep focus tools for teams</div>
+                        <div class="font-bold">Vedh</div>
+                        <div class="text-xs text-white/85">Deep focus tools for teams</div>
                     </div>
                 </div>
 
-                <h2>Welcome back</h2>
-                <p>
+                <h2 class="text-3xl font-bold mb-2.5">Welcome back</h2>
+                <p class="text-white/90 max-w-sm text-sm">
                     Sign in to continue to Vedh. Access your projects, collaborate with your
                     team and pick up where you left off.
                 </p>
             </aside>
 
             <!-- Right: form card -->
-            <section class="login-card" aria-labelledby="loginTitle">
-                <h3 id="loginTitle" class="title">Sign in to your account</h3>
-                <p class="subtitle">Enter your credentials to access the dashboard.</p>
+            <section class="card" aria-labelledby="loginTitle">
+                <h3 id="loginTitle" class="text-xl font-bold text-vedh-midnight mb-1.5">Sign in to your account</h3>
+                <p class="text-slate-600 mb-5 text-xs">Enter your credentials to access the dashboard.</p>
 
-                <form class="login-form" action="/login" method="POST" novalidate>
-                    <div class="form-group">
-                        <label class="form-label" for="username">Username</label>
-                        <div class="input-group">
+                <form class="space-y-3" action="/api/auth/login" method="POST" novalidate>
+                    <div>
+                        <label class="block text-xs text-slate-600 mb-2" for="username">Username</label>
+                        <div class="relative">
                             <span class="input-icon">👤</span>
-                            <input class="input with-icon" id="username" name="username" type="text" required placeholder="your.username" />
+                            <input class="input input-with-icon w-full" id="username" name="username" type="text" required placeholder="your.username" />
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-label" for="password">Password</label>
-                        <div class="input-group">
+                    <div>
+                        <label class="block text-xs text-slate-600 mb-2" for="password">Password</label>
+                        <div class="relative">
                             <span class="input-icon">🔒</span>
-                            <input class="input with-icon" id="password" name="password" type="password" required placeholder="••••••••" />
+                            <input class="input input-with-icon w-full" id="password" name="password" type="password" required placeholder="••••••••" />
                         </div>
                     </div>
 
-                    <div class="actions">
-                        <div class="remember-rows">
-                            <label class="remember-label">
-                                <span class="checkbox" aria-hidden="true"></span>
-                                <input type="checkbox" name="remember" class="hidden-checkbox" />
-                                <span class="muted">Remember me</span>
-                            </label>
-                            <a class="link" href="/forgot">Forgot?</a>
-                        </div>
-                        <div class="button-group">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
-                            <a href="/register" class="btn btn-ghost btn-link">Register</a>
-                        </div>
+                    <div class="flex items-center justify-between gap-3 pt-1">
+                        <label class="flex items-center gap-2 cursor-pointer text-xs text-slate-600">
+                            <span class="checkbox-custom"></span>
+                            <input type="checkbox" name="remember" class="hidden" />
+                            <span>Remember me</span>
+                        </label>
+                        <a class="text-primary text-xs font-semibold hover:underline" href="/forgot">Forgot?</a>
                     </div>
-                    <div class="divider-container">
-                        <div class="divider-line"></div>
-                        <div class="divider-text">or continue with</div>
-                        <div class="divider-line"></div>
+                    
+                    <div class="flex gap-2.5 pt-2">
+                        <button type="submit" class="btn btn-primary flex-1">Sign in</button>
+                        <a href="/register" class="btn btn-ghost">Register</a>
                     </div>
 
-                    <div class="socials" aria-hidden="false">
-                        <button type="button" class="social" title="Sign in with Google"><i class="fab fa-google"></i></button>
-                        <button type="button" class="social" title="Sign in with GitHub"><i class="fab fa-github"></i></button>
-                        <button type="button" class="social" title="Sign in with Microsoft"><i class="fab fa-microsoft"></i></button>
+                    <div class="flex items-center gap-3 my-3">
+                        <div class="flex-1 h-px bg-slate-200"></div>
+                        <div class="text-slate-500 text-xs">or continue with</div>
+                        <div class="flex-1 h-px bg-slate-200"></div>
+                    </div>
+
+                    <div class="flex gap-2.5">
+                        <button type="button" class="social-btn" title="Sign in with Google"><i class="fab fa-google"></i></button>
+                        <button type="button" class="social-btn" title="Sign in with GitHub"><i class="fab fa-github"></i></button>
+                        <button type="button" class="social-btn" title="Sign in with Microsoft"><i class="fab fa-microsoft"></i></button>
                     </div>
                 </form>
             </section>

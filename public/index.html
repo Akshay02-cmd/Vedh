@@ -5,99 +5,101 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vedh — Deep Focus Tools for Teams</title>
         <link rel="icon" type="image/png" href="./assets/logo.png" />
-        <link rel="stylesheet" href="./css/Index.css" />
+        <link rel="stylesheet" href="./css/output.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
-    <body>
+    <body class="bg-gradient-to-b from-vedh-mist to-slate-100 font-sans">
         <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="brand">
-                    <div class="logo">
-                        <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="logo-image" />
+        <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-hover flex items-center justify-center shadow-soft">
+                            <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="w-8 h-8 object-contain" />
+                        </div>
+                        <div class="text-xl font-bold text-vedh-midnight">Vedh</div>
                     </div>
-                    <div class="brand-name">Vedh</div>
-                </div>
-                <div class="nav-links">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="/login" class="btn btn-ghost btn-small">Sign In</a>
-                    <a href="/register" class="btn btn-primary btn-small">Get Started</a>
+                    <div class="flex items-center gap-6">
+                        <a href="#features" class="text-vedh-slate hover:text-primary transition-colors duration-200">Features</a>
+                        <a href="#about" class="text-vedh-slate hover:text-primary transition-colors duration-200">About</a>
+                        <a href="/login" class="btn btn-ghost px-4 py-2 text-sm">Sign In</a>
+                        <a href="/register" class="btn btn-primary px-4 py-2 text-sm">Get Started</a>
+                    </div>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">✨</span>
-                    <span>Welcome to Vedh</span>
-                </div>
-                <h1 class="hero-title">Deep Focus Tools<br/>for Modern Teams</h1>
-                <p class="hero-description">
-                    Streamline your workflow, boost productivity, and collaborate seamlessly 
-                    with powerful project management tools designed for deep focus work.
-                </p>
-                <div class="hero-buttons">
-                    <a href="/register" class="btn btn-primary btn-large">
-                        <span>Start Free Trial</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="/login" class="btn btn-ghost btn-large">
-                        <span>Sign In</span>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Active Users</div>
+        <section class="container mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-light rounded-full text-primary text-sm font-medium">
+                        <span class="text-lg">✨</span>
+                        <span>Welcome to Vedh</span>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-number">50K+</div>
-                        <div class="stat-label">Projects</div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-vedh-midnight leading-tight">
+                        Deep Focus Tools<br/>for Modern Teams
+                    </h1>
+                    <p class="text-lg text-vedh-slate leading-relaxed">
+                        Streamline your workflow, boost productivity, and collaborate seamlessly 
+                        with powerful project management tools designed for deep focus work.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/register" class="btn btn-primary px-8 py-3 text-base flex items-center gap-2">
+                            <span>Start Free Trial</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="/login" class="btn btn-ghost px-8 py-3 text-base">
+                            <span>Sign In</span>
+                        </a>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime</div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="visual-card card-1">
-                    <div class="card-header">
-                        <div class="card-icon">📊</div>
-                        <div class="card-title">Dashboard</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="progress-bar">
-                            <div class="progress-fill"></div>
+                    <div class="flex items-center gap-8 pt-8 border-t border-slate-200">
+                        <div>
+                            <div class="text-3xl font-bold text-vedh-midnight">10K+</div>
+                            <div class="text-sm text-vedh-slate">Active Users</div>
+                        </div>
+                        <div class="w-px h-12 bg-slate-200"></div>
+                        <div>
+                            <div class="text-3xl font-bold text-vedh-midnight">50K+</div>
+                            <div class="text-sm text-vedh-slate">Projects</div>
+                        </div>
+                        <div class="w-px h-12 bg-slate-200"></div>
+                        <div>
+                            <div class="text-3xl font-bold text-vedh-midnight">99.9%</div>
+                            <div class="text-sm text-vedh-slate">Uptime</div>
                         </div>
                     </div>
                 </div>
-                <div class="visual-card card-2">
-                    <div class="card-header">
-                        <div class="card-icon">✓</div>
-                        <div class="card-title">Tasks</div>
+                <div class="relative">
+                    <div class="card absolute top-0 right-0 w-64 p-4 animate-float-1">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="feature-icon text-2xl">📊</div>
+                            <div class="font-semibold text-vedh-midnight">Dashboard</div>
+                        </div>
+                        <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full w-3/4 bg-gradient-to-r from-primary to-primary-hover rounded-full"></div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="task-item"></div>
-                        <div class="task-item"></div>
-                        <div class="task-item"></div>
+                    <div class="card absolute top-32 left-0 w-64 p-4 animate-float-2">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="feature-icon text-2xl">✓</div>
+                            <div class="font-semibold text-vedh-midnight">Tasks</div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="h-1.5 bg-slate-200 rounded"></div>
+                            <div class="h-1.5 bg-slate-200 rounded w-5/6"></div>
+                            <div class="h-1.5 bg-slate-200 rounded w-4/6"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="visual-card card-3">
-                    <div class="card-header">
-                        <div class="card-icon">👥</div>
-                        <div class="card-title">Team</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="avatar-group">
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
-                            <div class="avatar"></div>
+                    <div class="card absolute bottom-0 right-12 w-64 p-4 animate-float-3">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="feature-icon text-2xl">👥</div>
+                            <div class="font-semibold text-vedh-midnight">Team</div>
+                        </div>
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white"></div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white"></div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-white"></div>
                         </div>
                     </div>
                 </div>
@@ -105,117 +107,145 @@
         </section>
 
         <!-- Features Section -->
-        <section id="features" class="features-section">
-            <div class="section-header">
-                <div class="section-badge">Features</div>
-                <h2 class="section-title">Everything you need to stay focused</h2>
-                <p class="section-description">
-                    Powerful features designed to help teams work smarter, not harder.
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Project Management</h3>
-                    <p class="feature-description">
-                        Organize tasks, set deadlines, and track progress with intuitive project boards.
+        <section id="features" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-block px-4 py-2 bg-primary-light text-primary text-sm font-semibold rounded-full mb-4">
+                        Features
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-vedh-midnight mb-4">
+                        Everything you need to stay focused
+                    </h2>
+                    <p class="text-lg text-vedh-slate">
+                        Powerful features designed to help teams work smarter, not harder.
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Team Collaboration</h3>
-                    <p class="feature-description">
-                        Work together seamlessly with real-time updates and shared workspaces.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Analytics & Insights</h3>
-                    <p class="feature-description">
-                        Make data-driven decisions with comprehensive analytics and reports.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Secure & Private</h3>
-                    <p class="feature-description">
-                        Enterprise-grade security to keep your data safe and protected.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">
-                        Optimized performance for smooth experience across all devices.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3 class="feature-title">Integrations</h3>
-                    <p class="feature-description">
-                        Connect with your favorite tools and streamline your workflow.
-                    </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Project Management
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Organize tasks, set deadlines, and track progress with intuitive project boards.
+                        </p>
+                    </div>
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">👥</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Team Collaboration
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Work together seamlessly with real-time updates and shared workspaces.
+                        </p>
+                    </div>
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Analytics & Insights
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Make data-driven decisions with comprehensive analytics and reports.
+                        </p>
+                    </div>
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">🔒</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Secure & Private
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Enterprise-grade security to keep your data safe and protected.
+                        </p>
+                    </div>
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Lightning Fast
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Optimized performance for smooth experience across all devices.
+                        </p>
+                    </div>
+                    <div class="card p-8 hover:shadow-lifted transition-all duration-300 group">
+                        <div class="feature-icon text-4xl mb-4">🔄</div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-3 group-hover:text-primary transition-colors">
+                            Integrations
+                        </h3>
+                        <p class="text-vedh-slate leading-relaxed">
+                            Connect with your favorite tools and streamline your workflow.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to boost your productivity?</h2>
-                <p class="cta-description">
-                    Join thousands of teams already using Vedh to achieve their goals.
-                </p>
-                <div class="cta-buttons">
-                    <a href="/register" class="btn btn-primary btn-large">
-                        <span>Get Started Free</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#features" class="btn btn-ghost btn-large">
-                        <span>Learn More</span>
-                    </a>
+        <section class="bg-gradient-to-br from-primary to-primary-hover py-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white">
+                        Ready to boost your productivity?
+                    </h2>
+                    <p class="text-lg text-primary-light">
+                        Join thousands of teams already using Vedh to achieve their goals.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 pt-6">
+                        <a href="/register" class="px-8 py-3 bg-white text-primary hover:bg-primary-light font-semibold rounded-xl shadow-lifted hover:shadow-2xl transition-all duration-300 flex items-center gap-2">
+                            <span>Get Started Free</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#features" class="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-semibold rounded-xl transition-all duration-300">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="brand">
-                        <div class="logo">
-                            <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="logo-image" />
+        <footer class="bg-vedh-midnight text-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-hover flex items-center justify-center">
+                                <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="w-8 h-8 object-contain" />
+                            </div>
+                            <div class="text-xl font-bold">Vedh</div>
                         </div>
-                        <div class="brand-name">Vedh</div>
+                        <p class="text-slate-400">Deep focus tools for teams</p>
                     </div>
-                    <p class="footer-tagline">Deep focus tools for teams</p>
+                    <div>
+                        <h4 class="font-semibold mb-4">Product</h4>
+                        <div class="space-y-2">
+                            <a href="#features" class="block text-slate-400 hover:text-primary transition-colors">Features</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Pricing</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Security</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Company</h4>
+                        <div class="space-y-2">
+                            <a href="#about" class="block text-slate-400 hover:text-primary transition-colors">About</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Blog</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Careers</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Support</h4>
+                        <div class="space-y-2">
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Help Center</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Contact</a>
+                            <a href="#" class="block text-slate-400 hover:text-primary transition-colors">Status</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Product</h4>
-                        <a href="#features" class="footer-link">Features</a>
-                        <a href="#" class="footer-link">Pricing</a>
-                        <a href="#" class="footer-link">Security</a>
+                <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-slate-400">&copy; 2025 Vedh. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-slate-400 hover:text-primary transition-colors">Privacy</a>
+                        <a href="#" class="text-slate-400 hover:text-primary transition-colors">Terms</a>
                     </div>
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Company</h4>
-                        <a href="#about" class="footer-link">About</a>
-                        <a href="#" class="footer-link">Blog</a>
-                        <a href="#" class="footer-link">Careers</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Support</h4>
-                        <a href="#" class="footer-link">Help Center</a>
-                        <a href="#" class="footer-link">Contact</a>
-                        <a href="#" class="footer-link">Status</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Vedh. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#" class="footer-link">Privacy</a>
-                    <a href="#" class="footer-link">Terms</a>
                 </div>
             </div>
         </footer>

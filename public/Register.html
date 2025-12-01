@@ -5,161 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vedh — Register</title>
     <link rel="icon" type="image/png" href="./assets/logo.png" />
-    <link rel="stylesheet" href="./css/Register.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body>
-    <div class="register-wrapper">
+  <body class="bg-gradient-to-b from-vedh-mist to-slate-100 min-h-screen flex items-center justify-center p-8">
+    <div class="w-full max-w-5xl grid lg:grid-cols-[1fr_420px] gap-8 items-center">
       <!-- Left hero / brand panel -->
-      <aside class="register-hero" aria-hidden="false">
-        <div class="brand">
-          <div class="logo">
-            <img
-              src="./assets/VedhLogo16.9.png"
-              alt="Vedh"
-              class="logo-image"
-            />
+      <aside class="hero-panel" aria-hidden="false">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl grid place-items-center shadow-inner">
+            <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="w-7 h-7 object-contain" />
           </div>
           <div>
-            <div class="brand-name">Vedh</div>
-            <div class="brand-tagline">Deep focus tools for teams</div>
+            <div class="font-bold">Vedh</div>
+            <div class="text-xs text-white/85">Deep focus tools for teams</div>
           </div>
         </div>
 
-        <h2>Join Vedh today</h2>
-        <p>
+        <h2 class="text-3xl font-bold mb-2.5">Join Vedh today</h2>
+        <p class="text-white/90 max-w-sm text-sm">
           Create your account to start collaborating with your team, manage
           projects efficiently and unlock powerful productivity tools.
         </p>
       </aside>
 
       <!-- Right: form card -->
-      <section class="register-card" aria-labelledby="registerTitle">
-        <h3 id="registerTitle" class="title">Create your account</h3>
-        <p class="subtitle">Fill in your details to get started with Vedh.</p>
+      <section class="card max-h-[calc(100vh-4rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent" aria-labelledby="registerTitle">
+        <h3 id="registerTitle" class="text-xl font-bold text-vedh-midnight mb-1.5">Create your account</h3>
+        <p class="text-slate-600 mb-5 text-xs">Fill in your details to get started with Vedh.</p>
 
-        <form class="register-form" action="/register" method="POST" novalidate>
-          <div class="form-group">
-            <label class="form-label" for="fullname">Full Name</label>
-            <div class="input-group">
+        <form class="space-y-3" action="/api/auth/register" method="POST" novalidate>
+          <div>
+            <label class="block text-xs text-slate-600 mb-2" for="fullname">Full Name</label>
+            <div class="relative">
               <span class="input-icon">👤</span>
-              <input
-                class="input with-icon"
-                id="fullname"
-                name="fullname"
-                type="text"
-                required
-                placeholder="John Doe"
-              />
+              <input class="input input-with-icon w-full" id="fullname" name="fullname" type="text" required placeholder="John Doe" />
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <div class="input-group">
+          <div>
+            <label class="block text-xs text-slate-600 mb-2" for="email">Email Address</label>
+            <div class="relative">
               <span class="input-icon">📧</span>
-              <input
-                class="input with-icon"
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="you@example.com"
-              />
+              <input class="input input-with-icon w-full" id="email" name="email" type="email" required placeholder="you@example.com" />
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="username">Username</label>
-            <div class="input-group">
+          <div>
+            <label class="block text-xs text-slate-600 mb-2" for="username">Username</label>
+            <div class="relative">
               <span class="input-icon">@</span>
-              <input
-                class="input with-icon"
-                id="username"
-                name="username"
-                type="text"
-                required
-                placeholder="your.username"
-              />
+              <input class="input input-with-icon w-full" id="username" name="username" type="text" required placeholder="your.username" />
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="password">Password</label>
-            <div class="input-group">
+          <div>
+            <label class="block text-xs text-slate-600 mb-2" for="password">Password</label>
+            <div class="relative">
               <span class="input-icon">🔒</span>
-              <input
-                class="input with-icon"
-                id="password"
-                name="password"
-                type="password"
-                required
-                placeholder="••••••••"
-              />
+              <input class="input input-with-icon w-full" id="password" name="password" type="password" required placeholder="••••••••" />
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="confirmPassword"
-              >Confirm Password</label
-            >
-            <div class="input-group">
+          <div>
+            <label class="block text-xs text-slate-600 mb-2" for="confirmPassword">Confirm Password</label>
+            <div class="relative">
               <span class="input-icon">🔒</span>
-              <input
-                class="input with-icon"
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                required
-                placeholder="••••••••"
-              />
+              <input class="input input-with-icon w-full" id="confirmPassword" name="confirmPassword" type="password" required placeholder="••••••••" />
             </div>
           </div>
 
-          <div class="actions">
-            <div class="terms-row">
-              <label class="terms-label">
-                <span class="checkbox" aria-hidden="true"></span>
-                <input
-                  type="checkbox"
-                  name="terms"
-                  class="hidden-checkbox"
-                  required
-                />
-                <span class="muted"
-                  >I agree to the
-                  <a href="/terms" class="link">Terms & Conditions</a></span
-                >
-              </label>
-            </div>
-
-            <div class="button-group">
-              <button type="submit" class="btn btn-primary">
-                Create Account
-              </button>
-              <a href="/login" class="btn btn-ghost btn-link">Sign In</a>
-            </div>
+          <div class="pt-1">
+            <label class="flex items-start gap-2 cursor-pointer text-xs text-slate-600 leading-relaxed">
+              <span class="checkbox-custom mt-0.5"></span>
+              <input type="checkbox" name="terms" class="hidden" required />
+              <span>I agree to the <a href="/terms" class="text-primary font-semibold hover:underline">Terms & Conditions</a></span>
+            </label>
           </div>
 
-          <div class="divider-container">
-            <div class="divider-line"></div>
-            <div class="divider-text">or sign up with</div>
-            <div class="divider-line"></div>
+          <div class="flex gap-2.5 pt-2">
+            <button type="submit" class="btn btn-primary flex-1">Create Account</button>
+            <a href="/login" class="btn btn-ghost">Sign In</a>
           </div>
 
-          <div class="socials" aria-hidden="false">
-            <button type="button" class="social" title="Sign up with Google">
-              <i class="fab fa-google"></i>
-            </button>
-            <button type="button" class="social" title="Sign up with GitHub">
-              <i class="fab fa-github"></i>
-            </button>
-            <button type="button" class="social" title="Sign up with Microsoft">
-              <i class="fab fa-microsoft"></i>
-            </button>
+          <div class="flex items-center gap-3 my-3">
+            <div class="flex-1 h-px bg-slate-200"></div>
+            <div class="text-slate-500 text-xs">or sign up with</div>
+            <div class="flex-1 h-px bg-slate-200"></div>
+          </div>
+
+          <div class="flex gap-2.5">
+            <button type="button" class="social-btn" title="Sign up with Google"><i class="fab fa-google"></i></button>
+            <button type="button" class="social-btn" title="Sign up with GitHub"><i class="fab fa-github"></i></button>
+            <button type="button" class="social-btn" title="Sign up with Microsoft"><i class="fab fa-microsoft"></i></button>
           </div>
         </form>
       </section>
