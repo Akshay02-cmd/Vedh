@@ -1,4 +1,3 @@
-import axios from "axios";
 const fullnameInput = document.getElementById("fullname");
 const emailInput = document.getElementById("email");
 const usernameInput = document.getElementById("username");
@@ -32,13 +31,13 @@ const setControlsDisabled = (disabled) => {
   if (registerButton) registerButton.disabled = disabled;
 };
 
-registerForm?.addEventListener("submit", async (e) => {
+registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const fullname = fullnameInput?.value?.trim() || "";
-  const email = emailInput?.value?.trim() || "";
-  const name = usernameInput?.value?.trim() || "";
-  const password = passwordInput?.value || "";
+  const fullname = fullnameInput.value.trim() || "";
+  const email = emailInput.value.trim() || "";
+  const name = usernameInput.value.trim() || "";
+  const password = passwordInput.value || "";
   const confirmPassword = confirmPasswordInput?.value || "";
   if (!fullname || !email || !name || !password || !confirmPassword) {
     showMessage("Please fill in all fields.", true);
@@ -52,13 +51,13 @@ registerForm?.addEventListener("submit", async (e) => {
   showMessage("Registering...");
 
   try {
-    const response = await axios.post("/register", {
+    const response = await axios.post("/api/v1/auth/register", {
       fullname,
+      username,
       email,
-      name,
       password,
-    });z
-    const redirectTo = response.data?.redirect || "/";
+    });
+    const redirectTo = response.data.redirect || "/";
     window.location.href = redirectTo;
   } catch (err) {
     const serverMessage =
@@ -69,4 +68,5 @@ registerForm?.addEventListener("submit", async (e) => {
     showMessage(String(serverMessage), true);
     setControlsDisabled(false);
   }
+  
 });

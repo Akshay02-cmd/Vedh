@@ -2,9 +2,9 @@ import express from 'express';
 const app = express();
 
 // security packages
-import helmet from 'helmet';
-import cors from 'cors';
-import rateLimiter from 'express-rate-limit';
+// import helmet from 'helmet';
+// import cors from 'cors';
+// import rateLimiter from 'express-rate-limit';
 
 // middlewares(error handling)
 import ErrorhandlerMiddelware from './middelwares/errorMiddelwares/Error-handle.Middelwares.js';
@@ -31,8 +31,8 @@ import commonRouter from './routes/Files.routes.js';
 //   })
 // );
 app.use(express.json());
-app.use(helmet());
-app.use(cors());
+// app.use(helmet());
+// app.use(cors());
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));

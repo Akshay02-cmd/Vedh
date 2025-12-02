@@ -6,15 +6,28 @@
     <title>Vedh — Register</title>
     <link rel="icon" type="image/png" href="./assets/logo.png" />
     <link rel="stylesheet" href="./css/output.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body class="bg-gradient-to-b from-vedh-mist to-slate-100 min-h-screen flex items-center justify-center p-8">
-    <div class="w-full max-w-5xl grid lg:grid-cols-[1fr_420px] gap-8 items-center">
+  <body
+    class="bg-gradient-to-b from-vedh-mist to-slate-100 min-h-screen flex items-center justify-center p-8"
+  >
+    <div
+      class="w-full max-w-5xl grid lg:grid-cols-[1fr_420px] gap-8 items-center"
+    >
       <!-- Left hero / brand panel -->
       <aside class="hero-panel" aria-hidden="false">
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl grid place-items-center shadow-inner">
-            <img src="./assets/VedhLogo16.9.png" alt="Vedh" class="w-7 h-7 object-contain" />
+          <div
+            class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl grid place-items-center shadow-inner"
+          >
+            <img
+              src="./assets/VedhLogo16.9.png"
+              alt="Vedh"
+              class="w-7 h-7 object-contain"
+            />
           </div>
           <div>
             <div class="font-bold">Vedh</div>
@@ -30,61 +43,129 @@
       </aside>
 
       <!-- Right: form card -->
-      <section class="card max-h-[calc(100vh-4rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent" aria-labelledby="registerTitle">
-        <h3 id="registerTitle" class="text-xl font-bold text-vedh-midnight mb-1.5">Create your account</h3>
-        <p class="text-slate-600 mb-5 text-xs">Fill in your details to get started with Vedh.</p>
+      <section
+        class="card max-h-[calc(100vh-4rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent"
+        aria-labelledby="registerTitle"
+      >
+        <h3
+          id="registerTitle"
+          class="text-xl font-bold text-vedh-midnight mb-1.5"
+        >
+          Create your account
+        </h3>
+        <p class="text-slate-600 mb-5 text-xs">
+          Fill in your details to get started with Vedh.
+        </p>
 
-        <form class="space-y-3" action="/api/auth/register" method="POST" novalidate>
+        <form class="space-y-3" id="registerForm" novalidate>
           <div>
-            <label class="block text-xs text-slate-600 mb-2" for="fullname">Full Name</label>
+            <label class="block text-xs text-slate-600 mb-2" for="fullname"
+              >Full Name</label
+            >
             <div class="relative">
               <span class="input-icon">👤</span>
-              <input class="input input-with-icon w-full" id="fullname" name="fullname" type="text" required placeholder="John Doe" />
+              <input
+                class="input input-with-icon w-full"
+                id="fullname"
+                name="fullname"
+                type="text"
+                required
+                placeholder="John Doe"
+              />
             </div>
           </div>
 
           <div>
-            <label class="block text-xs text-slate-600 mb-2" for="email">Email Address</label>
+            <label class="block text-xs text-slate-600 mb-2" for="email"
+              >Email Address</label
+            >
             <div class="relative">
               <span class="input-icon">📧</span>
-              <input class="input input-with-icon w-full" id="email" name="email" type="email" required placeholder="you@example.com" />
+              <input
+                class="input input-with-icon w-full"
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+              />
             </div>
           </div>
 
           <div>
-            <label class="block text-xs text-slate-600 mb-2" for="username">Username</label>
+            <label class="block text-xs text-slate-600 mb-2" for="username"
+              >Username</label
+            >
             <div class="relative">
               <span class="input-icon">@</span>
-              <input class="input input-with-icon w-full" id="username" name="username" type="text" required placeholder="your.username" />
+              <input
+                class="input input-with-icon w-full"
+                id="username"
+                name="username"
+                type="text"
+                required
+                placeholder="your.username"
+              />
             </div>
           </div>
 
           <div>
-            <label class="block text-xs text-slate-600 mb-2" for="password">Password</label>
+            <label class="block text-xs text-slate-600 mb-2" for="password"
+              >Password</label
+            >
             <div class="relative">
               <span class="input-icon">🔒</span>
-              <input class="input input-with-icon w-full" id="password" name="password" type="password" required placeholder="••••••••" />
+              <input
+                class="input input-with-icon w-full"
+                id="password"
+                name="password"
+                type="password"
+                required
+                placeholder="••••••••"
+              />
             </div>
           </div>
 
           <div>
-            <label class="block text-xs text-slate-600 mb-2" for="confirmPassword">Confirm Password</label>
+            <label
+              class="block text-xs text-slate-600 mb-2"
+              for="confirmPassword"
+              >Confirm Password</label
+            >
             <div class="relative">
               <span class="input-icon">🔒</span>
-              <input class="input input-with-icon w-full" id="confirmPassword" name="confirmPassword" type="password" required placeholder="••••••••" />
+              <input
+                class="input input-with-icon w-full"
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                required
+                placeholder="••••••••"
+              />
             </div>
           </div>
 
           <div class="pt-1">
-            <label class="flex items-start gap-2 cursor-pointer text-xs text-slate-600 leading-relaxed">
+            <label
+              class="flex items-start gap-2 cursor-pointer text-xs text-slate-600 leading-relaxed"
+            >
               <span class="checkbox-custom mt-0.5"></span>
               <input type="checkbox" name="terms" class="hidden" required />
-              <span>I agree to the <a href="/terms" class="text-primary font-semibold hover:underline">Terms & Conditions</a></span>
+              <span
+                >I agree to the
+                <a
+                  href="/terms"
+                  class="text-primary font-semibold hover:underline"
+                  >Terms & Conditions</a
+                ></span
+              >
             </label>
           </div>
 
           <div class="flex gap-2.5 pt-2">
-            <button type="submit" class="btn btn-primary flex-1">Create Account</button>
+            <button type="submit" class="btn btn-primary flex-1">
+              Create Account
+            </button>
             <a href="/login" class="btn btn-ghost">Sign In</a>
           </div>
 
@@ -95,14 +176,32 @@
           </div>
 
           <div class="flex gap-2.5">
-            <button type="button" class="social-btn" title="Sign up with Google"><i class="fab fa-google"></i></button>
-            <button type="button" class="social-btn" title="Sign up with GitHub"><i class="fab fa-github"></i></button>
-            <button type="button" class="social-btn" title="Sign up with Microsoft"><i class="fab fa-microsoft"></i></button>
+            <button
+              type="button"
+              class="social-btn"
+              title="Sign up with Google"
+            >
+              <i class="fab fa-google"></i>
+            </button>
+            <button
+              type="button"
+              class="social-btn"
+              title="Sign up with GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </button>
+            <button
+              type="button"
+              class="social-btn"
+              title="Sign up with Microsoft"
+            >
+              <i class="fab fa-microsoft"></i>
+            </button>
           </div>
         </form>
       </section>
     </div>
-
-    <script src="./scripts/Register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/Register.js"></script>
   </body>
 </html>
