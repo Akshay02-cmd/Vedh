@@ -238,84 +238,89 @@
                 </div>
             </section>
 
-            <!-- Productivity Graph Section -->
+            <!-- Achievements & Certifications Section -->
             <section class="py-16">
-                <div class="card p-8">
-                    <div class="flex items-center justify-between mb-8">
-                        <div>
-                            <h2 class="text-3xl font-bold text-vedh-midnight mb-2">Productivity Overview</h2>
-                            <p class="text-slate-600">My work performance over the last 6 months</p>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-vedh-midnight mb-4">Achievements & Certifications</h2>
+                    <p class="text-lg text-slate-600">Recognition and professional certifications</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Achievement Card 1 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-trophy"></i>
                         </div>
-                        <select class="input px-4 py-2 text-sm">
-                            <option>Last 6 Months</option>
-                            <option>Last 3 Months</option>
-                            <option>Last Year</option>
-                        </select>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">Top Performer 2024</h3>
+                        <p class="text-sm text-slate-600 mb-3">Recognized as the top performing developer with 95% project success rate and exceptional code quality.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>January 2024</span>
+                        </div>
                     </div>
 
-                    <!-- Mock Graph -->
-                    <div class="space-y-6">
-                        <div class="grid grid-cols-6 gap-4">
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-primary-hover rounded-lg" style="height: 75%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500">Jan</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-primary-hover rounded-lg" style="height: 85%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500">Feb</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-primary-hover rounded-lg" style="height: 70%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500">Mar</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-primary-hover rounded-lg" style="height: 90%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500">Apr</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-primary-hover rounded-lg" style="height: 95%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500">May</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="h-48 bg-slate-100 rounded-lg mb-2 relative overflow-hidden">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-500 to-green-600 rounded-lg" style="height: 92%"></div>
-                                </div>
-                                <div class="text-xs text-slate-500 font-semibold">Jun</div>
-                            </div>
+                    <!-- Achievement Card 2 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-certificate"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">AWS Certified Solutions Architect</h3>
+                        <p class="text-sm text-slate-600 mb-3">Professional level certification for designing distributed systems on AWS cloud platform.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>March 2024</span>
+                        </div>
+                    </div>
 
-                        <!-- Stats Grid -->
-                        <div class="grid md:grid-cols-4 gap-4 pt-8 border-t border-slate-200">
-                            <div class="text-center p-4 bg-slate-50 rounded-xl">
-                                <div class="text-3xl font-bold text-vedh-midnight mb-1">156</div>
-                                <div class="text-sm text-slate-600">Tasks Completed</div>
-                                <div class="text-xs text-green-600 font-semibold mt-1">+15% from last month</div>
-                            </div>
-                            <div class="text-center p-4 bg-slate-50 rounded-xl">
-                                <div class="text-3xl font-bold text-vedh-midnight mb-1">8.5h</div>
-                                <div class="text-sm text-slate-600">Avg. Daily Work</div>
-                                <div class="text-xs text-green-600 font-semibold mt-1">+0.5h from last month</div>
-                            </div>
-                            <div class="text-center p-4 bg-slate-50 rounded-xl">
-                                <div class="text-3xl font-bold text-vedh-midnight mb-1">92%</div>
-                                <div class="text-sm text-slate-600">Success Rate</div>
-                                <div class="text-xs text-green-600 font-semibold mt-1">+3% from last month</div>
-                            </div>
-                            <div class="text-center p-4 bg-slate-50 rounded-xl">
-                                <div class="text-3xl font-bold text-vedh-midnight mb-1">24</div>
-                                <div class="text-sm text-slate-600">Active Projects</div>
-                                <div class="text-xs text-orange-600 font-semibold mt-1">-2 from last month</div>
-                            </div>
+                    <!-- Achievement Card 3 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">Innovation Award</h3>
+                        <p class="text-sm text-slate-600 mb-3">Awarded for implementing AI-powered features that increased user engagement by 40%.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>June 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 4 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">Open Source Contributor</h3>
+                        <p class="text-sm text-slate-600 mb-3">Active contributor to major open source projects with 500+ commits and 50+ pull requests merged.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>Ongoing</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 5 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">Team Leadership Excellence</h3>
+                        <p class="text-sm text-slate-600 mb-3">Successfully led a team of 8 developers to deliver 5 major projects ahead of schedule.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>September 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Card 6 -->
+                    <div class="card p-6 hover:shadow-lifted transition-all group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-vedh-midnight mb-2">Full Stack Developer Certification</h3>
+                        <p class="text-sm text-slate-600 mb-3">Advanced certification in modern web development technologies and best practices.</p>
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fas fa-calendar"></i>
+                            <span>August 2023</span>
                         </div>
                     </div>
                 </div>
