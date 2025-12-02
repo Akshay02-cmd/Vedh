@@ -57,7 +57,7 @@ registerForm?.addEventListener("submit", async (e) => {
       email,
       name,
       password,
-    });
+    });z
     const redirectTo = response.data?.redirect || "/";
     window.location.href = redirectTo;
   } catch (err) {
