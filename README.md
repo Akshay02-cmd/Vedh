@@ -34,21 +34,27 @@ JWT_LIFETIME=1d
 ```
 paste this in your .env file
 
-## 📌 Features (MVP)
+## 📌 Features
 
-### ✅ Core Features
-- 🔖 **Clean Home Dashboard** with quick overview  
-- 📝 **Rich Text / Markdown Editor** for notes  
-- 📚 **Topic Tracking System**  
-- 📅 **Daily Progress Tracker**  
-- 📈 **Learning Streaks & Analytics**  
-- 🌙 **Light/Dark Mode**  
+### ✅ Completed Features
+- 🔐 **User Authentication** - Secure JWT-based login & registration
+- 📊 **Dashboard** - Modern, responsive dashboard with project stats
+- 👤 **User Profile** - Professional portfolio page for sharing
+- 🎨 **Tailwind CSS** - Beautiful, custom-designed UI components
+- 🔒 **Security** - Password hashing, HTTP-only cookies, CORS protection
+- 📱 **Responsive Design** - Mobile-first, works on all devices
+- 🗂️ **MongoDB Integration** - User data persistence
+- 📁 **File Management** - Static file serving with Express
 
 ### 🔥 Future Enhancements
-- 🤖 AI Suggestions & Smart Insights  
-- 🧩 Task recommendations based on patterns  
-- 📊 Deep progress analytics  
-- 🔐 User authentication & cloud sync  
+- 📝 **Rich Text Editor** - Note-taking with Markdown support
+- 📚 **Topic Tracking** - Learning progress tracking system
+- 📅 **Task Management** - Daily goals and to-do lists
+- 📈 **Analytics Dashboard** - Learning streaks and productivity insights
+- 🌙 **Dark Mode** - Theme switcher
+- 🤖 **AI Features** - Smart suggestions and insights
+- 👥 **Team Collaboration** - Real-time collaboration tools
+- 🔔 **Notifications** - Push notifications for updates  
 
 ---
 

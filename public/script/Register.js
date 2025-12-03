@@ -53,11 +53,11 @@ registerForm.addEventListener("submit", async (e) => {
   try {
     const response = await axios.post("/api/v1/auth/register", {
       fullname,
-      username,
+      username: name,
       email,
       password,
     });
-    const redirectTo = response.data.redirect || "/";
+    const redirectTo = response.data.redirect || "/dashboard.html";
     window.location.href = redirectTo;
   } catch (err) {
     const serverMessage =
